@@ -15,6 +15,7 @@ import LeaderBoard from "./pages/LeaderBoard";
 import ResetPage from "./pages/Login/ResetPage";
 import Contest from "./pages/Contest";
 import Profile from "./pages/Profile"
+import Tutorial from "./pages/Tutorial/Form"
 
 ReactDOM.render(
   <React.StrictMode>
@@ -28,7 +29,10 @@ ReactDOM.render(
           <Route path="/contest" element={<Contest />} />
           <Route path="*" element={<NotFound />} />
           <Route element={<ProtectedRoute />}>
+
+            <Route path="/tutorial" element={<Tutorial/>} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/tutorial" element={<Tutorial/>} />
             <Route path="/exploration" element={<ExplorationPage />} />
             <Route path="/label" element={<LabelPage />} />
             <Route path="/reviewLabels" element={<ReviewLabelingPage />} />
